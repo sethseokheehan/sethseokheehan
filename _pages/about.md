@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Undergraduate researcher, Dartmouth College
+subtitle: Dartmouth College '29
 
 profile:
   align: right
