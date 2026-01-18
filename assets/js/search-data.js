@@ -405,12 +405,10 @@ ninja.data = [{
           section: "News",},{id: "news-earned-the-gold-prize-1st-place-at-the-korea-science-amp-amp-engineering-fair-ksef",
           title: '🥇 Earned the Gold Prize (1st Place) at the Korea Science &amp;amp;amp; Engineering...',
           description: "",
-          section: "News",},{id: "news-publication-in-jsr",
-          title: 'Publication in JSR',
+          section: "News",},{id: "news-our-paper-real-time-black-ice-detection-in-drone-view-using-yolox-appeared-in-the-journal-of-student-research-vol-13-no-2-detailing-a-yolox-pipeline-for-drone-view-black-ice-detection-and-mapping-doi-10-47611-jsrhs-v13i2-6831",
+          title: '📄 Our paper “Real-Time Black Ice Detection in Drone View Using YOLOX” appeared...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/sethseokheehan/news/2025-05-01-JSR/";
-            },},{id: "news-kr-patent-10-2681032-for-black-ice-identification-and-warning-system-and-method-using-unmanned-aerial-vehicles-was-granted-on-july-4-2024",
+          section: "News",},{id: "news-kr-patent-10-2681032-for-black-ice-identification-and-warning-system-and-method-using-unmanned-aerial-vehicles-was-granted-on-july-4-2024",
           title: '✨ KR Patent 10-2681032 for “Black Ice Identification and Warning System and Method...',
           description: "",
           section: "News",},{id: "news-placed-3rd-out-of-221-teams-at-the-posco-dx-ai-youth-challenge",
