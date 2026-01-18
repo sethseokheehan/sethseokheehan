@@ -405,8 +405,8 @@ ninja.data = [{
           section: "News",},{id: "news-earned-the-gold-prize-1st-place-at-the-korea-science-amp-amp-engineering-fair-ksef",
           title: '🥇 Earned the Gold Prize (1st Place) at the Korea Science &amp;amp;amp; Engineering...',
           description: "",
-          section: "News",},{id: "news-jsr",
-          title: 'Jsr',
+          section: "News",},{id: "news-publication",
+          title: 'Publication',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/sethseokheehan/news/2025-05-01-JSR/";
