@@ -2,16 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Undergraduate researcher, Dartmouth College
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>School of Arts & Sciences, Dartmouth College</p>
+    <p>Hanover, NH, USA</p>
+    <p>Phone: +1 (603) 276-5846</p>
+    <p>Email: seth.s.han.29@dartmouth.edu</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +28,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I’m Seth Han, an undergraduate in Dartmouth’s Class of 2029 studying engineering sciences and music (GPA 4.0/4.0). My research focuses on machine learning for cyber-resilient energy systems and topology-aware weakly supervised semantic segmentation for anomaly detection. I currently work with the CREATE Lab at Dartmouth and collaborate with colleagues in the DOE Northeast University Cybersecurity Center.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before Dartmouth, I co-founded Drice and led the development of an AI-powered drone system for real-time black ice detection, resulting in a peer-reviewed paper and a granted Korean patent. My work has been recognized through the Presidential Science Scholarship of South Korea, multiple national science awards, and a Regeneron ISEF final.

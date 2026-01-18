@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2024-07-04 09:00:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+KR Patent 10-2681032 for “Black Ice Identification and Warning System and Method Using Unmanned Aerial Vehicles” was granted on July 4, 2024. :sparkles:

@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2025-12-04 09:00:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Awarded the Presidential Science Scholarship of South Korea (2025–2029), a merit-based \$50,000/year scholarship granted to 20 students nationwide.
