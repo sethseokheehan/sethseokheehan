@@ -11,8 +11,6 @@ profile:
   more_info: >
     <p>School of Arts & Sciences, Dartmouth College</p>
     <p>Hanover, NH, USA</p>
-    <p>Phone: +1 (603) 276-5846</p>
-    <p>Email: seth.s.han.29@dartmouth.edu</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
