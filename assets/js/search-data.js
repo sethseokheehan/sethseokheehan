@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sethseokheehan/publications/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "Curriculum vitae for Seth Han (last updated 2025-12-04).",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/sethseokheehan/cv/";
-          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
