@@ -486,7 +486,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/sethseokheehan/assets/pdf/SethSHan_CV.pdf", "_blank");
+          window.open("https://drive.google.com/file/d/1yiNwVr_wJgW_lxleL3-SASuKyLBSJHlK/view?usp=sharing", "_blank");
         },
       },{
         id: 'social-email',
