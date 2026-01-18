@@ -2,7 +2,7 @@
 # the commented lines are the default social media links supported by the template
 # the socials will be displayed in the order they are defined here
 
-cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
+cv_pdf: /assets/pdf/SethSHan_CV.pdf # path to your CV PDF file
 email: seth.s.han.29@dartmouth.edu # your email address
 linkedin_username: seth-han # your LinkedIn user name
 rss_icon: true # comment this line to hide the RSS icon
