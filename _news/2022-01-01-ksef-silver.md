@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Silver Prize (2nd Place) at the Korea Science & Engineering Fair (KSEF).
+🥈 Took the Silver Prize (2nd Place) at the Korea Science & Engineering Fair (KSEF).

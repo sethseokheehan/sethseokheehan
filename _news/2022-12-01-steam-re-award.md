@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Deputy Prime Minister/Minister of Education Award (1st Place) at STEAM R&E.
+🏆 Won the Deputy Prime Minister/Minister of Education Award (1st Place) at STEAM R&E.

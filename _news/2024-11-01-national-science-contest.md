@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Minister of Science & ICT Award (3rd Place & Provincial Representative) at the National Science Contest.
+🏅 Received the Minister of Science & ICT Award (3rd Place & Provincial Representative) at the National Science Contest.

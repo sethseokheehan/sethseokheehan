@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-2nd Place and Provincial Representative at the Korea Youth Startup Competition.
+🚀 Took 2nd Place and Provincial Representative honors at the Korea Youth Startup Competition.
