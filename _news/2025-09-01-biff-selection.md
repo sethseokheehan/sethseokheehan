@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-🎬 “Yellow Ghost” was selected for the Wide Angle - Korean Short Film Competition at the Busan International Film Festival (BIFF).
+🎬 <a href="https://www.biff.kr/eng/html/program/prog_view.asp?idx=77158&c_idx=421">“Yellow Ghost”</a> was selected for the Wide Angle - Korean Short Film Competition at the Busan International Film Festival (BIFF).
