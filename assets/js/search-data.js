@@ -83,6 +83,9 @@ ninja.data = [{
           section: "News",},{id: "news-yellow-ghost-was-selected-for-the-wide-angle-korean-short-film-competition-at-the-busan-international-film-festival-biff",
           title: '🎬 “Yellow Ghost” was selected for the Wide Angle - Korean Short Film...',
           description: "",
+          section: "News",},{id: "news-accepted-an-offer-as-an-undergraduate-intern-at-create-lab-at-dartmouth-advised-by-prof-junbo-zhao-and-funded-by-the-first-year-research-in-engineering-experience-fyree-program",
+          title: '⚡ Accepted an offer as an undergraduate intern at CREATE Lab at Dartmouth,...',
+          description: "",
           section: "News",},{
         id: 'social-cv',
         title: 'CV',
