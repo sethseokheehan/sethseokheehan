@@ -57,4 +57,23 @@ $(document).ready(function () {
   $('[data-toggle="popover"]').popover({
     trigger: "hover",
   });
+
+  // Remove mailto hyperlinks and expose obfuscated email text instead
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    const rawEmail = link.getAttribute("href").replace(/^mailto:/, "");
+    const obfuscated = rawEmail.replace("@", "{at}");
+    const span = document.createElement("span");
+    span.className = link.className;
+    span.setAttribute("title", obfuscated);
+    span.setAttribute("aria-label", obfuscated);
+
+    if (link.textContent && link.textContent.trim().length > 0) {
+      span.textContent = obfuscated;
+    } else {
+      span.innerHTML = link.innerHTML;
+      span.dataset.email = obfuscated;
+    }
+
+    link.replaceWith(span);
+  });
 });

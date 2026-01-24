@@ -100,9 +100,10 @@ ninja.data = [
       {%- endfor -%}
     {%- endif -%}
   {%- endfor -%}
-  {%- if site.socials_in_search -%}
-    {%- for social in site.data.socials -%}
-      {%- case social[0] -%}
+{%- if site.socials_in_search -%}
+  {%- for social in site.data.socials -%}
+    {%- assign skip_social = false -%}
+    {%- case social[0] -%}
         {%- when "acm_id" -%}
           {%- assign social_id = "social-acm" -%}
           {%- assign social_title = "ACM DL" -%}
@@ -131,10 +132,8 @@ ninja.data = [
           {%- assign social_id = "social-discord" -%}
           {%- assign social_title = "Discord" -%}
           {%- capture social_url %}"https://discord.com/users/{{ social[1] }}"{% endcapture -%}
-        {%- when "email" -%}
-          {%- assign social_id = "social-email" -%}
-          {%- assign social_title = "email" -%}
-          {%- capture social_url %}"mailto:{{ social[1] | encode_email }}"{% endcapture -%}
+    {%- when "email" -%}
+      {%- assign skip_social = true -%}
         {%- when "facebook_id" -%}
           {%- assign social_id = "social-facebook" -%}
           {%- assign social_title = "Facebook" -%}
@@ -299,6 +298,7 @@ ninja.data = [
           {%- assign social_title = social[0] | capitalize -%}
           {%- capture social_url %}"{{ social[1].url }}"{% endcapture -%}
       {%- endcase -%}
+    {%- unless skip_social -%}
       {
         id: '{{ social_id }}',
         title: '{{ social_title }}',
@@ -307,6 +307,7 @@ ninja.data = [
           window.open({{ social_url }}, "_blank");
         },
       },
+    {%- endunless -%}
     {%- endfor -%}
   {%- endif -%}
   {%- if site.enable_darkmode -%}
