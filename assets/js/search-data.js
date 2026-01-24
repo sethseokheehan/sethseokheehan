@@ -97,13 +97,6 @@ ninja.data = [{
           window.open("https://drive.google.com/file/d/1yiNwVr_wJgW_lxleL3-SASuKyLBSJHlK/view?usp=sharing", "_blank");
         },
       },{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%73%65%74%68.%73.%68%61%6E.%32%39@%64%61%72%74%6D%6F%75%74%68.%65%64%75", "_blank");
-        },
-      },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
