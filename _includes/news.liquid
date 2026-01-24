@@ -1,12 +1,6 @@
 <div class="news">
-  {% assign news = site.news %}
-  {% if include.category %}
-    {% assign news = news | where_exp: "item", "item.category == include.category" %}
-  {% endif %}
-  {% assign news = news | reverse %}
-  {% assign news_size = news | size %}
-
-  {% if news_size > 0 %}
+  {% if site.news != blank %}
+    {% assign news_size = site.news | size %}
     <div
       class="table-responsive"
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
@@ -14,6 +8,7 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless">
+        {% assign news = site.news | reverse %}
         {% if include.limit and page.announcements.limit %}
           {% assign news_limit = page.announcements.limit %}
         {% else %}
@@ -34,6 +29,6 @@
       </table>
     </div>
   {% else %}
-    <p>No items to show yet.</p>
+    <p>No news so far...</p>
   {% endif %}
 </div>
