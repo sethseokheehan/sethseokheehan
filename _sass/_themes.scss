@@ -42,6 +42,12 @@
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
+  --global-notice-bg: #dff4ff;
+  --global-notice-text: #0d3242;
+  --global-notice-border: #b6e6ff;
+  --global-notice-button-bg: #2698ba;
+  --global-notice-button-hover-bg: #1f7a95;
+  --global-notice-button-text: #ffffff;
 
   #light-toggle-system {
     padding-left: 10px;
@@ -113,6 +119,12 @@ html[data-theme="dark"] {
   --global-danger-block-bg: #600;
   --global-danger-block-text: #ffb9b9;
   --global-danger-block-title: #ffe0e0;
+  --global-notice-bg: rgba(38, 152, 186, 0.18);
+  --global-notice-text: #e3f7ff;
+  --global-notice-border: rgba(38, 152, 186, 0.6);
+  --global-notice-button-bg: #28a5c9;
+  --global-notice-button-hover-bg: #1f8aad;
+  --global-notice-button-text: #0a1920;
 
   .only-light {
     display: none;

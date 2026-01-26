@@ -135,6 +135,41 @@ blockquote {
   }
 }
 
+.alert.notice {
+  background-color: var(--global-notice-bg);
+  border-color: var(--global-notice-border);
+  color: var(--global-notice-text);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  div,
+  span,
+  strong,
+  em,
+  a {
+    color: var(--global-notice-text);
+  }
+
+  .btn,
+  .btn-primary {
+    background-color: var(--global-notice-button-bg);
+    border-color: var(--global-notice-button-bg);
+    color: var(--global-notice-button-text);
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background-color: var(--global-notice-button-hover-bg);
+    border-color: var(--global-notice-button-hover-bg);
+    color: var(--global-notice-button-text);
+  }
+}
+
 // Checklist
 
 ul.task-list {
