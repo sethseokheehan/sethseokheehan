@@ -89,6 +89,9 @@ ninja.data = [{
           section: "News",},{id: "news-accepted-an-offer-as-an-undergraduate-intern-at-create-lab-at-dartmouth-advised-by-prof-junbo-zhao-and-funded-by-the-first-year-research-in-engineering-experience-fyree-program",
           title: '⚡ Accepted an offer as an undergraduate intern at CREATE Lab at Dartmouth,...',
           description: "",
+          section: "News",},{id: "news-started-working-as-an-independent-computer-vision-researcher-at-lisp-lab-at-dartmouth-advised-by-prof-peter-chin-in-collaboration-with-korea-university",
+          title: '💻 Started working as an independent computer vision researcher at LISP Lab at...',
+          description: "",
           section: "News",},{
         id: 'social-cv',
         title: 'CV',
