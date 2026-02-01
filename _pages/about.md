@@ -11,11 +11,10 @@ profile:
   more_info: "Email: seth.s.han.29{at}dartmouth.edu"
 
 notice:
-  title: "Summer 2026: open to research / biz dev internships"
+  title: "Summer 2026: open to undergraduate research internships"
   text: >-
-    I'm actively looking for a Summer 2026 research position (Computer Vision /
-    AI Safety) or a business development internship. If you're hiring, I'd love
-    to connect.
+    I'm actively looking for a summer 2026 research positions in trustworthy AI, AI safety, or AI alignment. 
+    If you're hiring, I'd love to connect.
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
