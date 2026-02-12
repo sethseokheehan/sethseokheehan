@@ -11,9 +11,9 @@ profile:
   more_info: "Email: seth.s.han.29{at}dartmouth.edu"
 
 notice:
-  title: "Summer 2026: open to undergraduate research internships"
+  title: "Summer 2026: open to undergraduate internships"
   text: >-
-    I'm actively looking for a summer 2026 research positions in trustworthy AI, AI safety, or AI alignment. 
+    I'm actively looking for a summer 2026 product management / software engineering / research positions (trustworthy AI, AI safety, or applied ML).
     If you're hiring, I'd love to connect.
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
