@@ -10,11 +10,11 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: "Email: seth.s.han.29{at}dartmouth.edu"
 
-notice:
-  title: "Summer 2026: open to undergraduate internships"
-  text: >-
-    I'm actively looking for a summer 2026 product management / software engineering / research positions (trustworthy AI, AI safety, or applied ML).
-    If you're hiring, I'd love to connect.
+# notice:
+#   title: "Summer 2026: open to undergraduate internships"
+#   text: >-
+#     I'm actively looking for a summer 2026 product management / software engineering / research positions (trustworthy AI, AI safety, or applied ML).
+#     If you're hiring, I'd love to connect.
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -32,7 +32,7 @@ latest_posts:
 
 Hi! I'm Seth. I'm a freshman at Dartmouth pursuing engineering sciences and music and Presidential Science Scholar of South Korea. 
 
-My research interests lie at the intersection of applied machine learning and computer vision, and I'm currently working on robust machine learning for virtual power plants under cyber attacks under the supervision of Prof. <a href="https://sites.dartmouth.edu/cpeslab/junbo-zhao">Junbo Zhao</a> and developing topology-aware weakly-supervised semantic segmentation for manufacturing anomaly detection under the supervision of Prof. <a href="https://sites.dartmouth.edu/lisplab/sang-peter-chin">Peter Chin</a>.
+My research interests lie at the intersection of theoritical and applied machine learning, and I'm currently working on weakly-supervised semantic segmentation under the supervision of Prof. <a href="https://sites.dartmouth.edu/lisplab/sang-peter-chin">Peter Chin</a> (Dartmouth College) and grid operations for significan infrastructure under the supervision of Prof. <a href="https://sites.dartmouth.edu/cpeslab/junbo-zhao">Junbo Zhao</a> (Dartmouth College). For the summer 2026, I'll be working on applied machine learning under Prof. <a href="https://sia.korea.ac.kr/pi">Seokhyun Chung</a> (Korea University)'s supervision. 
 
 Before Dartmouth, I co-founded Drice and led the development of an AI-powered drone system for real-time black ice detection. I also worked for Enuma, an edtech startup developing AI-driven learning solutions for children with special needs.
 
