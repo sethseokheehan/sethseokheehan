@@ -1,11 +1,11 @@
 metadata:
-  last_updated: '2026-01-23'
+  last_updated: '2026-03-13'
 papers:
   YgFpUnIAAAAJ:u-x6o8ySG0sC:
     citations: 0
     title: Black Ice Identification and Warning System and Method Using Unmanned Aerial Vehicles
     year: '2024'
   YgFpUnIAAAAJ:u5HHmVD_uO8C:
-    citations: 1
+    citations: 3
     title: Real-Time Black Ice Detection in Drone View Using YOLOX
     year: '2024'
