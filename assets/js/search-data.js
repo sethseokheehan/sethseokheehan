@@ -100,7 +100,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("https://drive.google.com/file/d/1yiNwVr_wJgW_lxleL3-SASuKyLBSJHlK/view?usp=sharing", "_blank");
+          window.open("https://drive.google.com/file/d/1eK-KbSsefbmnX-HxeYp79AZV3NFp5nT3/view?usp=sharing", "_blank");
         },
       },{
         id: 'social-linkedin',
