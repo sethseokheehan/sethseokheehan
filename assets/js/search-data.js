@@ -89,7 +89,7 @@ ninja.data = [{
           section: "News",},{id: "news-accepted-an-offer-as-an-undergraduate-research-intern-at-cyber-physical-resilience-empowering-a-transformative-energy-future-create-lab-at-thayer-school-of-engineering-at-dartmouth-hanover-nh-advised-by-prof-junbo-zhao-and-funded-by-the-first-year-research-in-engineering-experience-fyree-program",
           title: '⚡ Accepted an offer as an undergraduate research intern at Cyber-Physical Resilience Empowering...',
           description: "",
-          section: "News",},{id: "news-joined-learning-intelligence-signal-processing-lisp-lab-at-thayer-school-of-engineering-at-dartmouth-hanover-nh-as-an-undergraduate-research-intern-advised-by-prof-peter-chin-in-collaboration-with-korea-university",
+          section: "News",},{id: "news-joined-learning-intelligence-signal-processing-lisp-lab-at-thayer-school-of-engineering-at-dartmouth-hanover-nh-as-an-undergraduate-research-intern-advised-by-prof-peter-chin-in-collaboration-with-the-university-of-oxford-and-korea-university",
           title: '💻 Joined Learning Intelligence + Signal Processing (LISP) Lab at Thayer School of...',
           description: "",
           section: "News",},{id: "news-️-i-ll-be-working-at-the-system-intelligence-amp-amp-analytics-sia-lab-at-the-school-of-industrial-management-engineering-at-korea-university-seoul-south-korea-as-an-undergraduate-research-intern-advised-by-prof-seokhyun-chung",
