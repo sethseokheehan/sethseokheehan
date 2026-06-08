@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Dartmouth College '29
+subtitle: Dartmouth College '29+2
 
 profile:
   align: right
