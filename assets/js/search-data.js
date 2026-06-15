@@ -70,8 +70,8 @@ ninja.data = [{
           section: "News",},{id: "news-joined-learning-intelligence-signal-processing-lisp-lab-at-thayer-school-of-engineering-at-dartmouth-hanover-nh-as-an-undergraduate-research-intern-advised-by-prof-peter-chin-in-collaboration-with-korea-university",
           title: '💻 Joined Learning Intelligence + Signal Processing (LISP) Lab at Thayer School of...',
           description: "",
-          section: "News",},{id: "news-️-i-ll-be-working-at-the-system-intelligence-amp-amp-analytics-sia-lab-at-the-school-of-industrial-management-engineering-at-korea-university-seoul-south-korea-as-an-undergraduate-research-intern-advised-by-prof-seokhyun-chung",
-          title: '⚙️ I’ll be working at the System Intelligence &amp;amp;amp; Analytics (SIA) Lab at...',
+          section: "News",},{id: "news-️-joined-system-intelligence-amp-amp-analytics-sia-lab-at-the-school-of-industrial-management-engineering-at-korea-university-seoul-south-korea-as-an-undergraduate-research-intern-advised-by-prof-seokhyun-chung",
+          title: '⚙️ Joined System Intelligence &amp;amp;amp; Analytics (SIA) Lab at the School of Industrial...',
           description: "",
           section: "News",},{
         id: 'social-cv',
