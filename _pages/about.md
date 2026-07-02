@@ -30,9 +30,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I'm Seth, a freshman at Dartmouth and a Presidential Science Scholar of South Korea. 
+Hi! I'm Seth, a rising sophomore at Dartmouth and a Presidential Science Scholar of South Korea. 
 
-My research interests lie at the intersection of theoritical and applied computer vision and machine learning. I'm working on computer vision with Prof. <a href="https://engineering.dartmouth.edu/community/faculty/peter-chin">Peter Chin</a> at Dartmouth and applied machine learning with Prof. <a href="https://sia.korea.ac.kr/pi">Seokhyun Chung</a> at Korea University. I'm currently on leave from Dartmouth due to the mandatory military service in Korea. 
+My research interests lie at the intersection of theoritical and applied computer vision and machine learning. I'm working on computer vision and anomaly detection with Prof. <a href="https://engineering.dartmouth.edu/community/faculty/peter-chin">Peter Chin</a> at Dartmouth and Prof. <a href="https://sia.korea.ac.kr/pi">Seokhyun Chung</a> at Korea University. I'm currently on leave from Dartmouth due to the mandatory military service in Korea. 
 
 Before Dartmouth, I co-founded Drice and led the development of a patented and published AI-powered drone system for real-time black ice detection. I also worked for Enuma, an edtech startup developing AI-driven learning solutions for children with special needs.
 
