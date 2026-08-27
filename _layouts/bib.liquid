@@ -1,190 +1,73 @@
 ---
 ---
 <div class="row">
-  {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-2 abbr">
-      {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
-          {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
-          >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
-            {% else %}
-              <div>{{- entry.abbr -}}</div>
-            {% endif %}
-          </abbr>
-        {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
-        {% endif %}
-      {% endif %}
-      {% if entry.preview %}
-        {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
-        {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          {%
-            include figure.liquid
-            loading="eager"
-            path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1 rounded"
-            zoomable=true
-            avoid_scaling=true
-            alt=entry.preview
-          %}
-        {% endif %}
+  {% if site.enable_publication_thumbnails and entry.preview %}
+    <div class="col col-sm-2 publication-preview">
+      {% if entry.preview contains '://' %}
+        <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+      {% else %}
+        {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+        {%
+          include figure.liquid
+          loading="eager"
+          path=entry_path
+          sizes = "200px"
+          class="preview z-depth-1 rounded"
+          zoomable=true
+          avoid_scaling=true
+          alt=entry.preview
+        %}
       {% endif %}
     </div>
   {% endif %}
 
-  <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
-    {% assign entrymonth = '' %}
-    {% if entry.month %}
-      {% assign entrymonth_key = entry.month | downcase %}
-      {% case entrymonth_key %}
-        {% when 'jan', 'january' %}
-          {% assign entrymonth_name = 'January' %}
-        {% when 'feb', 'february' %}
-          {% assign entrymonth_name = 'February' %}
-        {% when 'mar', 'march' %}
-          {% assign entrymonth_name = 'March' %}
-        {% when 'apr', 'april' %}
-          {% assign entrymonth_name = 'April' %}
-        {% when 'may' %}
-          {% assign entrymonth_name = 'May' %}
-        {% when 'jun', 'june' %}
-          {% assign entrymonth_name = 'June' %}
-        {% when 'jul', 'july' %}
-          {% assign entrymonth_name = 'July' %}
-        {% when 'aug', 'august' %}
-          {% assign entrymonth_name = 'August' %}
-        {% when 'sep', 'sept', 'september' %}
-          {% assign entrymonth_name = 'September' %}
-        {% when 'oct', 'october' %}
-          {% assign entrymonth_name = 'October' %}
-        {% when 'nov', 'november' %}
-          {% assign entrymonth_name = 'November' %}
-        {% when 'dec', 'december' %}
-          {% assign entrymonth_name = 'December' %}
-        {% else %}
-          {% assign entrymonth_name = entry.month | capitalize %}
-      {% endcase %}
-      {% capture entrymonth %}, {{ entrymonth_name }}{% endcapture %}
-    {% endif %}
-    {% assign citation_date = '' %}
-    {% if entry.year %}
-      {% capture citation_date %} ({{ entry.year }}{{ entrymonth }}).{% endcapture %}
-    {% endif %}
-
-    <!-- Title -->
-    <div class="title">{{ entry.title }}.</div>
-
-    <!-- Author and date -->
-    <div class="author">
-      {% assign author_array_size = entry.author_array | size %}
-
-      {% assign author_array_limit = author_array_size %}
-
-      {%- for author in entry.author_array limit: author_array_limit -%}
-        {% assign author_is_self = false %}
-        {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
-        {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
-        {% if site.scholar.last_name contains author_last_name %}
-          {% if site.scholar.first_name contains author.first %}
-            {% assign author_is_self = true %}
-          {% endif %}
-        {%- endif -%}
-        {% assign coauthor_url = null %}
-        {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
-        {% if site.data.coauthors[clean_last_name] %}
-          {%- for coauthor in site.data.coauthors[clean_last_name] -%}
-            {% if coauthor.firstname contains author.first %}
-              {%- assign coauthor_url = coauthor.url -%}
-              {% break %}
-            {%- endif -%}
-          {% endfor %}
-        {%- endif -%}
-
-        {%- if forloop.length > 1 -%}
-          {% if forloop.first == false -%}
-            {%- if forloop.last -%}
-              {%- if forloop.length > 2 %}, {% else %} {% endif -%}
-              &nbsp;&amp;&nbsp;
-            {%- else -%}
-              ,&nbsp;
-            {%- endif -%}
-          {%- endif %}
+  <!-- CSL-formatted bibliography entry. The IEEE style supplies numbering and field ordering. -->
+  <div class="{% if site.enable_publication_thumbnails and entry.preview %}col-sm-10{% else %}col-sm-12{% endif %}">
+    {% capture csl_number %}[{{ index }}]{% endcapture %}
+    {% assign formatted_reference = reference | replace_first: csl_number, '<span class="publication-number"></span>' %}
+    {% assign author_annotations = entry['author+an'] | split: ';' %}
+    {% for author in entry.author_array %}
+      {% assign author_initial = author.first | slice: 0, 1 %}
+      {% capture reference_author_name %}{{ author_initial }}. {{ author.last }}{% endcapture %}
+      {% assign author_annotation = '' %}
+      {% assign author_index = forloop.index | append: '' %}
+      {% for raw_annotation in author_annotations %}
+        {% assign annotation_parts = raw_annotation | strip | split: '=' %}
+        {% if annotation_parts[0] == author_index %}
+          {% assign author_annotation = annotation_parts[1] %}
+          {% break %}
         {% endif %}
-        {%- if author_is_self -%}
-          <strong>
-            {{- author.first }}
-            {{ author_last_html -}}
-          </strong>
-        {%- else -%}
-          {%- if coauthor_url -%}
-            <a href="{{ coauthor_url }}">
-              {{- author.first }}
-              {{ author_last_html -}}
-            </a>
-          {%- else -%}
-            {{- author.first }}
-            {{ author_last_html -}}
-          {% endif %}
-        {%- endif -%}
       {% endfor %}
-      {{ citation_date }}
-      {% if entry.annotation %}
-        <span class="author-note">({{ entry.annotation }})</span>
-      {% endif %}
-    </div>
-
-    <!-- Journal/Book title and publication details -->
-    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
-    {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
-    {% if entry.type == 'article' %}
-      {% capture entrytype -%}
-        <em>{{ entry.journal }}</em>
-        {%- if entry.volume -%}, {{ entry.volume }}{%- endif -%}
-        {%- if entry.number -%}({{ entry.number }}){%- endif -%}
-      {%- endcapture %}
-    {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
-    {% elsif thesis contains entry.type %}
-      {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
-    {% elsif entry.type == 'patent' %}
-      {% capture entrytype %}{{ entry.number }}{% endcapture %}
-    {% else %}
-      {% capture entrytype %}{% endcapture %}
+      {% capture styled_author_name %}
+        {%- if author_annotation contains 'highlight' -%}<u>{{ reference_author_name }}</u>{%- else -%}{{ reference_author_name }}{%- endif -%}
+        {%- if author_annotation contains 'equal' -%}<sup title="Equal contribution" aria-label="equal contribution">*</sup>{%- endif -%}
+      {% endcapture %}
+      {% assign formatted_reference = formatted_reference | replace_first: reference_author_name, styled_author_name %}
+    {% endfor %}
+    {% if entry.type == 'patent' and entry.number %}
+      {% capture patent_title %}“{{ entry.title }},”{% endcapture %}
+      {% capture numbered_patent_title %}{{ patent_title }} {{ entry.number }},{% endcapture %}
+      {% assign formatted_reference = formatted_reference | replace_first: patent_title, numbered_patent_title %}
     {% endif %}
-    {% if entry.location %}
-      {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
-    {% endif -%}
-    {% if entry.additional_info %}
-      {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
+    {% if entry.doi %}
+      {% capture doi_url %}https://doi.org/{{ entry.doi }}{% endcapture %}
+      {% capture linked_doi %}<a href="{{ doi_url }}">{{ entry.doi }}</a>{% endcapture %}
+      {% assign formatted_reference = formatted_reference | replace_first: entry.doi, linked_doi %}
     {% endif %}
-    {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
-    {% if hook_exists == 'true' %}
-      {% include hook/bib.liquid %}
+    {% if entry.url and entry.url != doi_url %}
+      {% capture linked_url %}<a href="{{ entry.url }}">{{ entry.url }}</a>{% endcapture %}
+      {% assign formatted_reference = formatted_reference | replace_first: entry.url, linked_url %}
     {% endif %}
-    {% assign periodical = entrytype | strip %}
-    {% if periodical != '' %}
-      <div class="periodical">
-        {{ periodical }}.
-      </div>
-    {% endif %}
+    <div class="reference">{{ formatted_reference }}</div>
     {% if entry.note %}
       <div class="periodical">
         {{ entry.note | strip }}.
       </div>
+    {% endif %}
+
+    {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
+    {% if hook_exists == 'true' %}
+      {% include hook/bib.liquid %}
     {% endif %}
 
     <!-- Links/Buttons -->
@@ -196,9 +79,6 @@
       {% endif %}
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-      {% endif %}
-      {% if entry.doi %}
-        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>

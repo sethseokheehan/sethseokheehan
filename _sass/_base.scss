@@ -750,6 +750,7 @@ footer.sticky-bottom {
 // Publications
 
 .publications {
+  counter-reset: publication;
   margin-top: 2rem;
 
   h1 {
@@ -782,33 +783,18 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
+      counter-increment: publication;
       margin-bottom: 1rem;
+
+      .publication-number::before {
+        content: "[" counter(publication) "]\00a0";
+      }
 
       .preview {
       }
 
-      .abbr {
+      .publication-preview {
         margin-bottom: 0.5rem;
-
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
-
-          a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-        }
       }
 
       .title {

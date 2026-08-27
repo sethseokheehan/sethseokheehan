@@ -284,7 +284,7 @@ scholar:
   last_name: [Han]
   first_name: [Seth, Seokhee, S.]
 
-  style: apa
+  style: ieee
   locale: en
 
   source: /_bibliography/
@@ -316,11 +316,11 @@ enable_publication_badges:
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
   [
-    abbr,
     abstract,
     additional_info,
     altmetric,
     annotation,
+    author+an,
     arxiv,
     award,
     award_name,
