@@ -73,8 +73,8 @@ ninja.data = [{
           section: "News",},{id: "news-️-joined-system-intelligence-amp-amp-analytics-sia-lab-at-the-school-of-industrial-management-engineering-at-korea-university-seoul-south-korea-as-an-undergraduate-research-intern-advised-by-prof-seokhyun-chung",
           title: '⚙️ Joined System Intelligence &amp;amp;amp; Analytics (SIA) Lab at the School of Industrial...',
           description: "",
-          section: "News",},{id: "news-two-of-my-co-first-authored-papers-sparc-subspace-position-aware-robust-few-shot-calibration-for-distribution-shifted-industrial-anomaly-detection-and-cdgp-contrastive-dual-gaussian-processes-for-weakly-supervised-anomaly-segmentation-are-on-arxiv",
-          title: 'Two of my co-first-authored papers, SPARC: Subspace Position-Aware Robust Few-Shot Calibration for Distribution-Shifted Industrial...',
+          section: "News",},{id: "news-two-of-my-co-first-authored-papers-sparc-and-cdgp-are-on-arxiv",
+          title: 'Two of my co-first-authored papers, SPARC and CDGP, are on arXiv!',
           description: "",
           section: "News",},{
         id: 'social-cv',
